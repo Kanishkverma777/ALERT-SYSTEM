@@ -777,7 +777,8 @@ if st.session_state.result:
             st.pydeck_chart(pdk.Deck(
                 layers=layers,
                 initial_view_state=view_state,
-                map_style=None,
+                map_provider="carto",
+                map_style=pdk.map_styles.CARTO_DARK,
                 tooltip={"text": "{label}"}
             ))
 
